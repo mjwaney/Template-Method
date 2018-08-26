@@ -9,14 +9,17 @@ require "vendor/autoload.php";
 
 $soldiers = [];
 
-$soldiers[0] = new SwordUnit('Jack');
-$soldiers[1] = new ArcherUnit('Jim');
-$soldiers[2] = new SwordUnit('Jason');
-$soldiers[3] = new ArcherUnit('Johnny');
-$soldiers[4] = new SwordUnit('Jane');
-$soldiers[5] = new ArcherUnit('Jessy');
+$soldiers[0] = new SwordUnit();
+$soldiers[1] = new ArcherUnit();
+$soldiers[2] = new SwordUnit();
+$soldiers[3] = new ArcherUnit();
+$soldiers[4] = new SwordUnit();
+$soldiers[5] = new ArcherUnit();
 
-foreach($soldiers as $soldier){
+$names = ['Jack', 'Jim', 'Jason', 'Johnny', 'Jane', 'Jessy'];
+
+foreach($soldiers as $key => $soldier){
+	$soldier->setName($names[$key]);
 	echo $soldier->takeAction('Attack');
 	echo "<br>";
 	echo $soldier->takeAction('Defend');
