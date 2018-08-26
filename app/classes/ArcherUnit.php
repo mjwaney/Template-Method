@@ -13,4 +13,9 @@ class ArcherUnit extends Soldier
 	{
 		return $this->execute("retreating");
 	}
+
+    public function awaitOrders()
+    {
+        return $this->execute("Wut!?");
+    }
 }

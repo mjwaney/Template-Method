@@ -16,8 +16,11 @@ abstract class Soldier
 			return	$this->attack();
 
 		}elseif($order == 'Defend'){
+
 			return $this->defend();
 
+		}else{
+			return $this->awaitOrders();
 		}
 	}
 
@@ -37,5 +40,10 @@ abstract class Soldier
 	public function execute($action = "")
 	{
 		return "$this->name: $action";
+	}
+
+	public function awaitOrders()
+	{
+		return $this->execute("I don't understand");
 	}
 }
