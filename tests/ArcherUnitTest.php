@@ -2,17 +2,17 @@
 
 namespace Tests;
 
-use App\Classes\SwordUnit;
+use App\Classes\ArcherUnit;
 use App\Classes\Soldier;
 use PHPUnit\Framework\TestCase;
 
-class SwordUnitTest extends TestCase
+class ArcherUnitTest extends TestCase
 {
     private $soldier;
 
     public function setUp()
     {
-        $this->soldier = new SwordUnit();
+        $this->soldier = new ArcherUnit();
     }
     
     /** @test */
@@ -25,8 +25,7 @@ class SwordUnitTest extends TestCase
     /** @test */
     public function take_action()
     {
-        $this->assertEquals('John Doe: swinging sword!', $this->soldier->takeAction('Attack'));
-        $this->assertEquals('John Doe: raising shield!', $this->soldier->takeAction('Defend'));
-    }   
- 
+        $this->assertEquals('John Doe: firing arrows', $this->soldier->takeAction('Attack'));
+        $this->assertEquals('John Doe: retreating', $this->soldier->takeAction('Defend'));
+    } 
 }

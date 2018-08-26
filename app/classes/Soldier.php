@@ -19,7 +19,6 @@ abstract class Soldier
 			return $this->defend();
 
 		}
-
 	}
 
 	public function setName(String $name)
