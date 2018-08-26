@@ -5,7 +5,7 @@ namespace App\Classes;
 abstract class Soldier
 {
 	private $order;
-	protected $name = 'John Doe';
+	private $name = 'John Doe';
 
 	public final function takeAction($order)
 	{
