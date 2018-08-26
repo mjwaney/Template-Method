@@ -1,0 +1,12 @@
+# Opdracht 5
+- Welk design pattern is gekozen?
+  - Er is gekozen voor het template method pattern
+- Wat zijn de kenmerken (toegevoegde waarde) van dit design pattern?
+  - Er is een (abstracte) basis klasse met 'template' code die voor alle subklassen vast staat
+  - Concrete subklassen van deze klasse overschrijven of vullen de code vervolgens aan waar nodig
+- Welke concept is bedacht om het pattern te kunnen toepassen?
+  - Het concept is van verschillende typen soldaten die overerven van de hoofdklasse soldaat. Een soldaat kan altijd aanvallen of verdedigen, maar de implementatie hiervan kan anders zijn van elkaar en van de basis klasse.
+- Wat zijn de responsibilities van de geimplementeerde classes?
+  - De geimplementeerde klasse moet er voor zorgen dat een bepaald stuk code altijd op dezelfde manier uitgevoerd wordt (in dit geval takeAction())
+- In welk opzicht wordt polymorfie bereikt?
+  - De subklassen overerven standaard gedrag van de basisklasse, maar kunnen dit gedrag op hun eigen manier implementeren. Zo resulteert takeAction() in ander gedrag bij verschillende subklassen  
