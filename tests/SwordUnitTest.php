@@ -3,6 +3,7 @@
 namespace Tests;
 
 use App\Classes\SwordUnit;
+use App\Classes\Soldier;
 use PHPUnit\Framework\TestCase;
 
 class SwordUnitTest extends TestCase
@@ -20,5 +21,13 @@ class SwordUnitTest extends TestCase
         $this->soldier->setName('Jack');
         $this->assertEquals('Jack', $this->soldier->getName());
     }
+    
+    /** @test */
+    public function take_action()
+    {
+        $this->assertEquals('Attack', $this->soldier->takeAction('Attack'));
+    }
+
+
  
 }

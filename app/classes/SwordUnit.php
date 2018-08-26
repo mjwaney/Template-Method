@@ -2,7 +2,7 @@
 
 namespace App\Classes;
 
-class SwordUnit
+class SwordUnit extends Soldier
 {
 	protected $name;
 
@@ -14,5 +14,15 @@ class SwordUnit
 	public function getName()
 	{
 		return $this->name;
+	}
+
+	public function attack()
+	{
+		$this->execute("swinging sword!");
+	}
+
+	public function defend()
+	{
+		$this->execute("raising shield!");
 	}
 }
