@@ -37,6 +37,6 @@ abstract class Soldier
 
 	public function execute($action = "")
 	{
-		return $action;
+		return "$this->name: $action";
 	}
 }

@@ -25,8 +25,8 @@ class SwordUnitTest extends TestCase
     /** @test */
     public function take_action()
     {
-        $this->assertEquals('swinging sword!', $this->soldier->takeAction('Attack'));
-        $this->assertEquals('raising shield!', $this->soldier->takeAction('Defend'));
+        $this->assertEquals('John Doe: swinging sword!', $this->soldier->takeAction('Attack'));
+        $this->assertEquals('John Doe: raising shield!', $this->soldier->takeAction('Defend'));
     }
     
  
