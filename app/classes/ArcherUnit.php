@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Classes;
+use App\Classes\ArcherAttack;
 
 class ArcherUnit extends Soldier
 {
-	public function attack()
+	public function __construct()
 	{
-		return $this->execute("firing arrows");
+		$this->attack = new ArcherAttack;
 	}
 
 	public function defend()

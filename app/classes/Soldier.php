@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Classes;
+use App\CLasses\iAttack; 
 
 abstract class Soldier
-{
+{	
 	private $order;
 	private $name = 'John Doe';
+	protected $attack;
 
 	public final function takeAction($order)
 	{
@@ -34,7 +36,15 @@ abstract class Soldier
 		return $this->name;
 	}
 
-	public abstract function attack();
+	public function setAttackMethod(iAttack $attack){
+		$this->attack = $attack;
+	}
+
+	public function attack()
+	{
+		return $this->execute($this->attack->attack());
+	}
+
 	public abstract function defend();
 
 	public function execute($action = "")

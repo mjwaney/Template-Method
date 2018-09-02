@@ -4,6 +4,7 @@ namespace App;
 
 use App\Classes\SwordUnit;
 use App\Classes\ArcherUnit;
+use App\Classes\RocketAttack;
 
 require "vendor/autoload.php";	
 
@@ -25,5 +26,8 @@ foreach($soldiers as $key => $soldier){
 	echo $soldier->takeAction('Defend');
 	echo "<br>";
 	echo $soldier->takeAction('Barrel roll');
+	echo "<br>";
+	$soldier->setAttackMethod(new RocketAttack);
+	echo $soldier->takeAction('Attack');
 	echo "<br>";
 }
